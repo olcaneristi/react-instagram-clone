@@ -1,0 +1,166 @@
+@import "../styles/variables.scss";
+
+section.posts {
+  margin-top: 30px;
+
+  .post-container {
+    margin: auto;
+    max-width: 700px;
+    overflow: hidden;
+    border: 1px solid $border-pearl;
+    border-radius: 5px;
+    background: $bg-white;
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      height: 60px;
+      border-bottom: 1px solid $border-pearl;
+      background: $bg-white;
+
+      .post-avatar {
+        padding: 2px;
+        border-radius: 50%;
+        background: linear-gradient(219deg, $bg-story-start, $bg-story-end);
+
+        .avatar-xs {
+          border-radius: inherit;
+          display: flex;
+          border: 1px solid $border-white;
+        }
+      }
+
+      .username-container {
+        font-size: $fontSize;
+        font-weight: $fontWeight;
+        margin-left: 14px;
+        align-items: center;
+
+        .post-username {
+          text-decoration: none;
+          p {
+            color: $text-darkgray;
+
+            &:active {
+              opacity: 0.75;
+            }
+          }
+        }
+
+        .post-location {
+          text-decoration: none;
+          color: $text-darkgray;
+
+          span {
+            font-size: $fontSize - 2px;
+            font-weight: $fontWeight - 100;
+          }
+        }
+      }
+      .post-more {
+        border: none;
+        background: $bg-transparent;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        margin-left: auto;
+      }
+    }
+    section.post-caption-container {
+      padding: 0 16px;
+      background: $bg-white;
+      margin-bottom: 16px;
+    }
+    .post-content {
+      outline: none;
+      border: none;
+
+      .post-image-xl {
+        object-fit: contain;
+        max-width: 100%;
+      }
+    }
+    .post-action-buttons {
+      display: flex;
+
+      button {
+        background: $bg-transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px 8px 4px 8px;
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .button-left {
+      display: flex;
+
+      button:nth-child(1) {
+        margin-left: -8px;
+      }
+    }
+
+    .button-right {
+      margin-left: auto;
+      display: flex;
+    }
+  }
+
+  .post-like-counts {
+    font-weight: $fontWeight + 100;
+    outline: none;
+    border: none;
+    background: $bg-transparent;
+    cursor: pointer;
+    color: $text-darkgray;
+    display: block;
+    margin-bottom: 8px;
+
+    &:active {
+      opacity: 0.75;
+    }
+  }
+  .post-caption {
+    font-size: $fontSize;
+    color: $text-darkgray;
+    margin-bottom: 8px;
+    .comment-username {
+      text-decoration: none;
+      font-weight: $fontWeight + 100;
+      color: $text-darkgray;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section.posts {
+    max-width: 100%;
+    padding-top: 0;
+    display: block;
+    margin-bottom: 15px !important;
+    margin-top: 0px !important;
+
+    .post-container {
+      border-radius: 0 !important;
+      border: none !important;
+    }
+
+    .post-header,
+    .post-caption-container {
+      background: none !important;
+      border: none !important;
+    }
+
+    .post-content {
+      max-width: 100%;
+      .post-image-xl {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "../styles/variables.scss";
+
+section.header {
+  border-bottom: 1px solid $border-pearl;
+  padding: 7px 20px;
+  background-color: $bg-white;
+  margin-bottom: 1px;
+  z-index: 90;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  .header-container {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    height: auto;
+    justify-content: space-between;
+    max-width: 940px;
+  }
+
+  a.story-nav,
+  .direct-nav-active {
+    display: none;
+  }
+
+  .header-img {
+    img {
+      margin-top: 7px;
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .search-bar {
+    .search-input {
+      border: 1px solid $border-pearl;
+      background-color: $bg-pearl;
+      outline: none;
+      height: 28px;
+      width: 215px;
+      padding: 7px;
+      border-radius: 3px;
+      left: -4px;
+      cursor: text;
+      color: $text-darkgray;
+    }
+
+    ::placeholder {
+      text-align: center;
+      color: $placeholder-gray;
+      font-size: $fontSize;
+      font-weight: $fontWeight - 200;
+    }
+
+    input:focus::placeholder {
+      text-align: left;
+    }
+  }
+
+  .nav-bar {
+    display: flex;
+    a {
+      margin-left: 22px;
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    .home-nav {
+      margin-left: 0;
+    }
+
+    .search-nav,
+    .newpost-nav {
+      display: none;
+    }
+    .small-nav-img {
+      border-radius: 99px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section.header {
+    padding: 2px 16px;
+
+    a.story-nav,
+    .direct-nav-active {
+      display: flex;
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    .nav-bar {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+      background: $bg-white;
+      height: 50px;
+      justify-content: space-evenly;
+      align-items: center;
+      border-top: 1px solid $border-pearl;
+    }
+
+    .search-nav,
+    .newpost-nav {
+      display: flex !important;
+    }
+    .explore-nav,
+    .direct-nav {
+      display: none;
+    }
+  }
+
+  .search-bar {
+    display: none;
+  }
+}

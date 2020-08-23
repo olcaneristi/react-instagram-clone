@@ -1,0 +1,25 @@
+@import "../components/header.scss";
+@import "../components/posts.scss";
+@import "../components/Story.scss";
+@import "./variables.scss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: $global-font;
+}
+
+html {
+  background-color: $bg-pearl;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    background: $bg-white;
+  }
+}

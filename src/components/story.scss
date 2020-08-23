@@ -1,0 +1,71 @@
+@import "../styles/variables.scss";
+
+.stories {
+  margin-top: 30px;
+
+  .story-container {
+    max-width: 700px;
+    background: $bg-white;
+    border: 1px solid $border-pearl;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding: 20px 16px 16px 16px;
+    overflow: auto;
+    white-space: nowrap;
+    align-items: center;
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      li {
+        list-style-type: none;
+        margin-right: 15.75px;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          padding: 2px;
+          border-radius: 50%;
+          background: linear-gradient(219deg, $bg-story-start, $bg-story-end);
+
+          &:active {
+            opacity: 0.9;
+          }
+
+          span {
+            font-size: $fontSize - 2px;
+            color: $text-darkgray;
+            cursor: pointer;
+          }
+
+          img {
+            border-radius: inherit;
+            border: 2px solid $border-white;
+          }
+        }
+        .story-first {
+          background: linear-gradient(10deg, $bg-close-start, $bg-close-end);
+        }
+        .story-text {
+          background: none;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .stories {
+    margin-top: 0 !important;
+
+    .story-container {
+      padding: 16px 8px 10px 8px;
+      margin-bottom: 0;
+      border: none !important;
+      border-bottom: 1px solid $border-pearl !important;
+      background: $bg-pearl !important;
+    }
+  }
+}
