@@ -26,7 +26,7 @@
         a {
           display: flex;
           flex-direction: column;
-          padding: 2px;
+          padding: 2.5px;
           border-radius: 50%;
           background: linear-gradient(219deg, $bg-story-start, $bg-story-end);
 
@@ -42,7 +42,7 @@
 
           img {
             border-radius: inherit;
-            border: 2px solid $border-white;
+            border: 1.5px solid $border-white;
           }
         }
         .story-first {
