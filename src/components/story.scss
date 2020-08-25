@@ -25,10 +25,9 @@
 
         a {
           display: flex;
-          flex-direction: column;
-          border: 2px solid transparent;
           border-radius: 9999px;
-          background: linear-gradient(219deg, $bg-story-start, $bg-story-end);
+          border: 2px solid transparent;
+          background: linear-gradient(220deg, $bg-story-start, $bg-story-end);
 
           &:active {
             opacity: 0.9;
@@ -41,9 +40,9 @@
           }
 
           img {
+            border: 2px solid $bg-white;
             display: flex;
             border-radius: 9999px;
-            border: 2px solid $border-white;
           }
         }
         .story-first {
@@ -52,6 +51,7 @@
         .story-text {
           background: none;
           text-decoration: none;
+          border: none;
         }
       }
     }
