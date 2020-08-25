@@ -26,8 +26,8 @@
         a {
           display: flex;
           flex-direction: column;
-          padding: 2.5px;
-          border-radius: 50%;
+          border: 2px solid transparent;
+          border-radius: 9999px;
           background: linear-gradient(219deg, $bg-story-start, $bg-story-end);
 
           &:active {
@@ -41,8 +41,9 @@
           }
 
           img {
-            border-radius: inherit;
-            border: 1.5px solid $border-white;
+            display: flex;
+            border-radius: 9999px;
+            border: 2px solid $border-white;
           }
         }
         .story-first {
