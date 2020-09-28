@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Home, Direct, Explore, Like, NewPost, Search, NewStory } from "./icons"
 
 export default function header() {
@@ -9,41 +10,43 @@ export default function header() {
           <NewStory width="22" height="22" />
         </a>
 
-        <a className="header-img" href="/#">
+        <Link className="header-img" to="/">
           <img
             className="logo-img"
             src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
             alt=""
             loading="lazy"
           />
-        </a>
-        <a className="direct-nav-active" href="/#">
-          <Direct />
-        </a>
+        </Link>
+        <Link className="direct-nav-active" to="/inbox">
+          <button>
+            <Direct />
+          </button>
+        </Link>
         <div className="search-bar">
           <input className="search-input" type="text" placeholder="Ara" />
         </div>
         <nav className="nav-bar">
-          <a className="home-nav" href="/#">
+          <Link className="home-nav" to="/">
             <Home />
-          </a>
-          <a className="direct-nav" href="/#">
+          </Link>
+          <Link className="direct-nav" to="/inbox">
             <Direct />
-          </a>
+          </Link>
 
-          <a className="search-nav" href="/#">
+          <Link className="search-nav" to="/#">
             <Search width="22" height="22" />
-          </a>
-          <a className="newpost-nav" href="/#">
+          </Link>
+          <Link className="newpost-nav" to="/#">
             <NewPost width="22" height="22" />
-          </a>
-          <a className="explore-nav" href="/#">
+          </Link>
+          <Link className="explore-nav" to="/explore">
             <Explore />
-          </a>
-          <a className="like-nav" href="/#">
+          </Link>
+          <Link className="like-nav" to="/like">
             <Like />
-          </a>
-          <a className="profile-nav" href="/#">
+          </Link>
+          <Link className="profile-nav" to="/profile">
             <img
               className="small-nav-img"
               src="https://pbs.twimg.com/profile_images/1288864030334091264/9QM__Gx__400x400.jpg"
@@ -52,7 +55,7 @@ export default function header() {
               width="22"
               draggable="false"
             />
-          </a>
+          </Link>
         </nav>
       </div>
     </section>
