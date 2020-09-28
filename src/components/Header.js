@@ -19,9 +19,7 @@ export default function header() {
           />
         </Link>
         <Link className="direct-nav-active" to="/inbox">
-          <button>
-            <Direct />
-          </button>
+          <Direct />
         </Link>
         <div className="search-bar">
           <input className="search-input" type="text" placeholder="Ara" />
