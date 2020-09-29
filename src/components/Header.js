@@ -47,7 +47,7 @@ export default function header() {
           <Link className="profile-nav" to="/profile">
             <img
               className="small-nav-img"
-              src="https://pbs.twimg.com/profile_images/1288864030334091264/9QM__Gx__400x400.jpg"
+              src="https://avatarfiles.alphacoders.com/145/145932.jpg"
               alt=""
               height="22"
               width="22"
