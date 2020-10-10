@@ -22,12 +22,27 @@
       li {
         list-style-type: none;
         margin-right: 15.75px;
+        display: flex;
+
+        button {
+          background: none;
+          outline: none;
+          border: none;
+        }
 
         a {
-          display: flex;
           border-radius: 9999px;
-          border: 2px solid transparent;
-          background: linear-gradient(220deg, $bg-story-start, $bg-story-end);
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          margin: 0 15px;
+          text-decoration: none;
+
+          &:nth-child(1) {
+            margin-left: 0;
+          }
 
           &:active {
             opacity: 0.9;
@@ -40,9 +55,10 @@
           }
 
           img {
-            border: 2px solid $bg-white;
             display: flex;
             border-radius: 9999px;
+            border: 2.5px solid transparent;
+            background: linear-gradient(220deg, $bg-story-start, $bg-story-end);
           }
         }
         .story-first {
