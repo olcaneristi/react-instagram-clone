@@ -35,8 +35,9 @@ function Home() {
   return (
     <div>
       <Story />
-      {posts.map((posts) => (
+      {posts.map((posts, index) => (
         <Posts
+          key={index}
           Avatar={posts.Avatar}
           username={posts.username}
           postLocation={posts.postLocation}
