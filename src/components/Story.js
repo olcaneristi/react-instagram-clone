@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import storyData from "./storyData"
 
 function Story() {
   return (
@@ -6,139 +7,23 @@ function Story() {
       <div className="story-container">
         <ul>
           <li>
-            <a className="story-first" href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
-          </li>
-          <li>
-            <a className="story-first" href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img
-                src="https://avatarfiles.alphacoders.com/145/145932.jpg"
-                height="56"
-                width="56"
-                alt="story-avatar"
-                loading="lazy"
-              />
-            </a>
-            <a className="story-text" href="/#">
-              {" "}
-              <span>olcaneristi</span>
-            </a>
+            {storyData.map((item, index) => {
+              return (
+                <button key={index}>
+                  <a href="/#">
+                    <img
+                      src={item.image}
+                      height={item.height}
+                      width={item.width}
+                      alt={item.alt}
+                      loading={item.loading}
+                      className={item.cName}
+                    />
+                    <span>{item.text}</span>
+                  </a>
+                </button>
+              )
+            })}
           </li>
         </ul>
       </div>
