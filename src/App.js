@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import "./styles/index.scss"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Loading from "./components/icons/Loading"
+import Loading from "./components/Loading"
 import Header from "./components/Header"
 import { Home, Explore, Inbox, Profile, Like } from "./pages"
 
