@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import storyData from "./storyData"
 
 function Story() {
