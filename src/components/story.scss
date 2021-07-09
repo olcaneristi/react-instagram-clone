@@ -59,6 +59,8 @@
             border-radius: 9999px;
             border: 2.5px solid transparent;
             background: linear-gradient(220deg, $bg-story-start, $bg-story-end);
+            object-fit: cover;
+            object-position: top;
           }
         }
         .story-first {
