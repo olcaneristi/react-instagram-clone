@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## [Live Demo](https://react-instagram-teal.vercel.app/)
 
+### Screenshots
+
+![web](https://user-images.githubusercontent.com/45832621/132773500-5430336d-daf9-443e-aca5-e75a9d25ea8e.gif)
+![mob](https://user-images.githubusercontent.com/45832621/132773504-a7a2d92b-7fd4-4c32-bace-1ae9bcdae3c1.gif)
+
+
+
 #### Install deps
 
 ```bash
